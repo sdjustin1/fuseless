@@ -1,8 +1,8 @@
 #!/bin/bash
 
-if [[ !$LUCEE_VERSION ]]; then
+#f [[ !$LUCEE_VERSION ]]; then
 	LUCEE_VERSION=6.2.0.321
-fi
+#fi
 
 if [ -f "java/jars/lucee-light-$LUCEE_VERSION.jar" ]; then
 	echo "lucee-light-$LUCEE_VERSION.jar already there, skipping download"
