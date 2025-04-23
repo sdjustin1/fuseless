@@ -1,17 +1,17 @@
 #!/bin/bash
 
-#f [[ !$LUCEE_VERSION ]]; then
+if [[ !$LUCEE_VERSION ]]; then
 	LUCEE_VERSION=6.2.0.321
-#fi
+fi
 
-if [ -f "java/jars/lucee-light-$LUCEE_VERSION.jar" ]; then
-	echo "lucee-light-$LUCEE_VERSION.jar already there, skipping download"
+if [ -f "java/jars/lucee-$LUCEE_VERSION.jar" ]; then
+	echo "lucee-$LUCEE_VERSION.jar already there, skipping download"
 else 
 	#download lucee jar
-	echo "Downloading lucee-light-$LUCEE_VERSION.jar"
-	echo "https://cdn.lucee.org/lucee-light-$LUCEE_VERSION.jar"
-	curl --location -o java/jars/lucee-light-$LUCEE_VERSION.jar https://cdn.lucee.org/lucee-light-$LUCEE_VERSION.jar
-	cp java/jars/lucee-light-$LUCEE_VERSION.jar test/jars/
+	echo "Downloading lucee-$LUCEE_VERSION.jar"
+	echo "https://cdn.lucee.org/lucee-$LUCEE_VERSION.jar"
+	curl --location -o java/jars/lucee-$LUCEE_VERSION.jar https://cdn.lucee.org/lucee-$LUCEE_VERSION.jar
+	cp java/jars/lucee-$LUCEE_VERSION.jar test/jars/
 fi
 
 
